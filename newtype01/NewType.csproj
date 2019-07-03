@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B468E55-7D7A-4FBC-8FA2-ACBE259F4D3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewType.Seeker</RootNamespace>
+    <AssemblyName>DataSeeker</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Interface\VSNETWebServiceDynamicDiscovery_8215.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azuki">
+      <HintPath>..\..\..\..\..\Desktop\参考ソース\Azuki\Azuki-1.7.12-bin\Azuki.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeView.Sql">
+      <HintPath>..\..\..\..\..\Desktop\参考ソース\SQLBrowser1.0.0.8\SqlFormatter1.0.0.4\FreeView.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\FileManager.cs" />
+    <Compile Include="Interface\ConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ConnectionForm.Designer.cs">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\VersionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBase\CommonSqlServer.cs" />
+    <Compile Include="DataBase\DBProvider.cs" />
+    <Compile Include="Common\ConfigManager.cs" />
+    <Compile Include="Interface\Common\KeyboardHook.cs" />
+    <Compile Include="Control\Azuki\AzukiManager.cs" />
+    <Compile Include="Interface\OpacityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\OpacityForm.Designer.cs">
+      <DependentUpon>OpacityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Settings.cs" />
+    <Compile Include="Interface\TableBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TableBrowser.Designer.cs">
+      <DependentUpon>TableBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TabView\CustumTab.cs" />
+    <Compile Include="Interface\Common\FormManager.cs" />
+    <Compile Include="Interface\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TabView\TabView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\TabView\TabView.Designer.cs">
+      <DependentUpon>TabView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Control\Azuki\SQLKeywordHighlighter.cs" />
+    <Compile Include="DataBase\SqlServerManager.cs" />
+    <Compile Include="Control\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Common\SetForceFocus.cs" />
+    <Compile Include="Common\TimeCounter.cs" />
+    <EmbeddedResource Include="Interface\ConnectionForm.resx">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\OpacityForm.resx">
+      <DependentUpon>OpacityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TableBrowser.resx">
+      <DependentUpon>TableBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\TabView\TabView.resx">
+      <DependentUpon>TabView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\VersionDialog.resx">
+      <DependentUpon>VersionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Interface\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VSNETWebServiceDynamicDiscovery_8215.ico" />
+    <None Include="Resources\DataTable_8468.png" />
+    <Content Include="Interface\VSNETWebServiceDynamicDiscovery_8215.ico" />
+    <None Include="Resources\VSNETWebServiceDynamicDiscovery_8215_16x.png" />
+    <Content Include="Control\Azuki\SQLKeyword.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_StartDate="2000/1/1" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildAction="Both" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_BuildVersioningStyle="Increment.YearStamp.MonthStamp.DayStamp" BuildVersion_ReplaceNonNumerics="False" BuildVersion_IncrementBeforeBuild="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
