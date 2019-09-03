@@ -162,6 +162,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Azuki.dll" />
+    <Content Include="Resources\FreeView.Sql.dll" />
     <None Include="Resources\VSNETWebServiceDynamicDiscovery_8215.ico" />
     <None Include="Resources\DataTable_8468.png" />
     <Content Include="Interface\VSNETWebServiceDynamicDiscovery_8215.ico" />
@@ -171,7 +173,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2000/1/1" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildAction="Both" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_BuildVersioningStyle="Increment.YearStamp.MonthStamp.DayStamp" BuildVersion_ReplaceNonNumerics="False" BuildVersion_IncrementBeforeBuild="False" />
+      <UserProperties BuildVersion_IncrementBeforeBuild="False" BuildVersion_ReplaceNonNumerics="False" BuildVersion_BuildVersioningStyle="Increment.YearStamp.MonthStamp.DayStamp" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_BuildAction="Both" BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_StartDate="2000/1/1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
